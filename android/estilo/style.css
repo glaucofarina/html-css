@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/*fonte importada do google fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*fonte que veio na pasta dos dados do site*/
+@font-face {
+    font-family: Android;
+    src: url('../fontes/idroid.otf') format(opentype);
+    font-weight: normal;
+}
+
+
+/*
+    Na pseudo-classe :root podemos declarar as variaveis GLOBAIS iniciando sempre por -- e terminando com ;
+    Desta forma quando queremos alterar algo globalmente, como uma cor ou fonte, é só vir nas configuraçoes globais e a alteração terá efeito em todo a pagina.
+*/
+:root {
+    /*Escala de cores monocromatica para paleta do site*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /*Fontes determinadas para todo o site*/
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+/*no seletor GLOBAL (*) podemos determinar configurações que vao agir em todo site ou seja este seletor determina a configuração de todo o site*/
+/*ABAIXO - margin 0 e paddin 0 significa que todos os elementos estão zerados de margem e de espaçamento, ou seja vao ficar colados uns nos outros e nas bordas do navegador e serão configurados um a um conforme a necessidade.*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);/*cor de fundo usando as variaveis de cores declaradas na pseudo-classe root*/
+    font-family: var(--fonte-padrao);/*fonte padrão usando as variaveis de fontes declaradas na pseudo-classe root*/
+}
+
+a.externo::after{/*em todo link da CLASSE externo será colocado um espaço e uma imagem APÓS(after) ao link*/
+    content: '\00A0\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/*imagem gradiente de cima pra baixo, do claro para o escuro, assim se iguala a cor do menu*/
+    min-height: 150px;/*altura minima do cabeçalho*/
+    text-align: center;/*alinhar os textos dentro do cabeçalho*/
+    padding-top: 40px;/*distancia da margem pra dentro, assim consegue dar a distancia no titulo sem interferir a margem*/
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque);
+    color: white;
+    font-size: 3em;/*tamanho da fonte, 3 vezes o padrão*/
+    /*margin-top: 30px;  -  margem de cima do titulo - neste caso não funcionou pois a margem vazou para fora, então usamos o paddin-top: 40px; no header*/
+    font-weight: normal;/*deixa a fonte sem ser negrito, deixa mais bonito visualmente*/
+    margin-bottom: 20px;/*margem abaixo do titulo*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);/*sombra do texto*/
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-size: 1.2em;
+    margin: auto;/*margin auto centraliza o bloco*/
+    max-width: 600px;/*tamanho maximo do paragrafo, ele limita o tamanho maximo, então quando diminuimos o tamanho e for menos de 600 quebra a linha e espreme o conteudo - definindo a largura o paragrafo automaticamente vira um bloco*/
+    padding-left: 10px;/*distancias laterais para nao ficar colado*/
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);/*sobra do texto*/
+}
+
+nav {
+    background-color: var(--cor5);/*cor personalizada do menu*/
+    padding: 10px;/*padding geral*/
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.253);/*sombra abaixo do menu*/
+}
+
+nav > a {
+    text-decoration: none;/*retirar o sublinhado dos links*/
+    color: white;/*cor do texto*/
+    padding: 10px;/*distancia entre as caixas*/
+    border-radius: 5px;/*arredondamento das caixas*/
+    font-weight: bold;/*engrossar o tamanho da fonte*/
+    transition-duration: .5s;/*velocidade de transição entre normal e hover*/
+}
+
+nav > a:hover {/*funcionamento quando passar o mouse por cima*/
+    background-color: var(--cor3);/*cor do fundo da caixa*/
+    color: var(--cor5);/*cor da letra*/
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+
+    margin: auto;/*as margens laterais serão executadas automaticamente, o main ficará no centro*/
+    margin-bottom: 30px;/*margem abaixo para separar main do rodapé*/
+    min-width: 300px;/*tamanho minimo antes de criar uma barra de rolagem embaixo*/
+    max-width: 1000px;/*tamanho maximo que o main terá*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);/*sombra nas laterais do main*/
+    border-bottom-left-radius: 10px;/*arredondamento do canto inferior esquerdo*/
+    border-bottom-right-radius: 10px;/*arredondamento do canto inferior direito*/
+}
+
+main h1 {
+    font-family: var(--fonte-android);/*tipo da letra*/
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--cor5);/*cor da letra*/
+}
+
+main h2 {
+    font-family: var(--fonte-android);/*tipo da letra*/
+    font-size: 1.2em;/*tamanho da fonte*/
+    font-weight: normal;
+    padding-left: 8px;/*espacamento a esuqerda ref ao background*/
+    color: var(--cor4);/*cor da fonte*/
+    background-image: linear-gradient(to right, var(--cor1), transparent);/*cor de fundo gradiente para a direita de cor 1 até transparente*/
+}
+
+main p {
+    margin: 15px 0px;/*altera apenas as margens laterais*/ 
+    text-align: justify;/*centraliza o texto justificando*/
+    text-indent: 30px;/*deixa o espaço de 30px no inicio do paragrafo*/
+    line-height: 2em;/*espaço entre linhas*/
+    font-size: 1em;
+}
+
+main strong {
+    color: var(--cor4);/*cor da fonte*/
+    font-weight: bold;/*tamanho da fonte*/
+}    
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor4);
+    background-color: var(--cor1);
+    padding: 2px 5px;
+}
+
+main a:hover {
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    display: block; /*como imagem por padrao não é um bloco e aqui queremos fazer ela virar um bloco para poder alterar o tamanho então usa-se o parametro display: block para a imagem virar um bloco, ai sim podemos alterar tamanho, margem etc como foi feito abaixo*/
+    max-width: 350px;/*a imagem vai ficar sempre do mesmo tamanho, vai ter um tamanho maximo de 350px e quando diminuir a tela ela vai ficar feande tambem*/
+    margin: auto;/*margem automatica para centralizar'*/
+}
+
+div.video {
+    background-color: var(--cor5);
+    position: relative;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+    padding: 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;/*cria uma margem negativa*/
+    border-radius: 10px 10px 0px 0px;/*arredonda somente as bordas superiores*/
+}
+
+aside > ul {
+    list-style-position: inside;/*traz as bolinhas da lista pra dentro do aside*/
+    list-style-type: '\2714\00A0\00A0';/*visitar o site emojipedia, escolheu checkmark, pegou o codigo numerico 2714 que corresponde a marca de check, contrabarra, marca de check contrabarra e dois espaços 00A0 */
+    columns: 2;/*transforma a lista em duas colunas, pode ter 3 ou outro numero*/
+
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {/*estas configurações terão efeito em todo link que estiver dentro de footer seja ele dentro de paragrafo, fora, seja h1 ou em qualquer outro lugar pois não tem nenhum caminho sendo especificado.*/
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor1);
+}
+
+/*
+desta forma abaixo tambem está correto, porem estas cofigurações só terão efeito nos links que estiverem dentro do paragrafo.
+Aqui está sendo especificado um caminho completo de pai para filho.
+
+footer > p > a {
+
+}
+*/
