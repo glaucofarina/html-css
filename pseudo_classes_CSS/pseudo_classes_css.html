@@ -5,8 +5,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo Classes em CSS</title>
+    <style>
+        body {
+            margin-top: 70px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+        /* 1 - Pseudo classes para links, alterando o comportamento do link*/
+        .link {
+           text-decoration: none;
+        }
+
+        /* Quando o link não for visitado*/
+        .link:link {
+            color: green;
+        }
+
+        /* Quando o link for visitado*/
+        .link:visited {
+            color: red;
+        }
+
+        /*Quando passamos o cursor por cima do link*/
+        .link:hover {
+            color: orange;
+        }
+
+        /*focar no link, usando a tecla tab*/
+        .link:focus {
+            color: blueviolet;
+        }
+
+        /*Quando o link estiver ativo no click*/
+        .link:active {
+            color: deepskyblue;
+        }
+
+
+
+        /* 2 - Identificar e manipilar o estado do elemento em uma lista, primeiro e ultimo filho*/
+        /*configurações gerais da lista*/
+        .japan {
+            width: 250px;
+            margin-top: 50px;
+            padding: 0px;
+        }
+
+        .japan li {
+            color: #666;
+            list-style: none;/*apagando a decoração dos itens da lista*/
+            border-bottom: 1px solid black;/*criando borda abaixo de todos os elementos*/
+            margin-bottom: 3px;
+            padding-bottom: 3px;
+        }
+
+        .japan ul {
+            padding: 0px;
+        }
+
+
+        /*01*/
+        /* Manipulando o estado do primeiro elemento da lista*/
+        .japan .one li:first-child {
+            color: blue;
+        }
+
+        /*manipulando o estado do ultimo elemento da lista*/
+        .japan .one li:last-child {
+            color: red;
+            border: none;/*apagando a borda abaixo deste elemento*/
+        }
+
+        /*manipula o enésimo(o numero n, ou seja qquer numero) item de uma lista, neste caso abaixo o terceiro item - .japan .one li:nth-child(n)*/
+        .japan .one li:nth-child(3){
+            background-color: gray;
+        }
+
+
+        /*02*/
+        /*seleção por expressão matematica onde (n) sempre vai ser 1 então 2n será 2x1*/
+        .japan .two li:nth-child(2n){
+            background-color: yellow;
+        }
+
+        .japan .two li:last-child {
+            border: none;
+        }
+
+
+        /*03*/
+        /*retira as bordas dos links*/
+        .japan .three li {
+            border: none;
+        }
+
+        /*seleciona apenas linhas pares ou por expressão matemática - 2n*/
+        .japan .three li:nth-child(even) {
+            background-color: lightgray;
+        }
+
+
+        /*04*/
+        /*retira as bordas dos links*/
+        .japan .four li {
+            border: none;
+        }
+
+        /*seleciona apenas linhas impares ou similarmente pela expressão matemática - 2n-1*/
+        .japan .four li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+
+        /*5*/
+        /*retira as bordas dos links*/
+        .japan .five li {
+            border: none;
+        }
+
+        /*como está last-child então neste caso será aplicada a configuração de baixo pra cima, começando pelo ultimo. Vale para expressão matematica, pares e impares*/
+        /*seleção por expressão matematica onde (n) sempre vai ser 1 então 2n será 2x1*/
+        .japan .five li:nth-last-child(2) {/*seleciona o segundo item de baixo pra cima*/
+            background-color: lightgray;
+        }
+
+
+        /*6*/
+        /*retira as bordas dos links*/
+        .japan .six li {
+            border: none;
+        }
+
+        /*seleciona o terceiro item da lista seja ele qual for, não diferenciando o tipo de elemento*/
+        .japan .six :nth-child(3){
+            background-color: lightgray;
+        }
+
+        /*7*/
+        /*retira as bordas dos links*/
+        .japan .seven li {
+            border: none;
+        }
+
+        /*seleciona o terceiro item da lista, diferenciando o tipo de elemento, ou seja não selecionará, neste caso o que não for item da lista*/
+        .japan .seven li:nth-of-type(3) {
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
-    
+    <a href="http://youtube.com" target="_blank" class="link">YouTube</a>
+
+    <div class="japan">
+        <div class="one">
+            <p>ONE<p>
+            <ul>
+                <li>Babymetal</li>
+                <li>Exina</li>
+                <li>Lisa</li>
+                <li>Nemophila</li>
+                <li>Atarachi Gako</li>
+            </ul>
+        </div>
+        <div class="two">
+            <p>TWO</p>
+            <ul>
+                <li>Babymetal</li>
+                <li>Exina</li>
+                <li>Lisa</li>
+                <li>Nemophila</li>
+                <li>Atarachi Gako</li>
+            </ul>
+        </div>    
+        <div class="three">
+            <p>THREE</p>
+            <ul>
+                <li>Babymetal</li>
+                <li>Exina</li>
+                <li>Lisa</li>
+                <li>Nemophila</li>
+                <li>Atarachi Gako</li>
+            </ul>
+        </div>
+        <div class="four">
+            <p>FOUR</p>
+            <ul>
+                <li>Babymetal</li>
+                <li>Exina</li>
+                <li>Lisa</li>
+                <li>Nemophila</li>
+                <li>Atarachi Gako</li>
+            </ul>
+        </div>
+        <div class="five">
+            <p>FIVE</p>
+            <ul>
+                <li>Babymetal</li>
+                <li>Exina</li>
+                <li>Lisa</li>
+                <li>Nemophila</li>
+                <li>Atarachi Gako</li>
+            </ul>
+        </div>
+        <div class="six">
+            <p>SIX</p>
+            <ul>
+                <li>Babymetal</li>
+                <a href="#">any link</a>
+                <li>Exina</li>
+                <a href="#">any link</a>
+                <li>Lisa</li>
+                <a href="#">any link</a>
+                <li>Nemophila</li>
+                <a href="#">any link</a>
+                <li>Atarachi Gako</li>
+                <a href="#">any link</a>
+            </ul>
+        </div>
+        <div class="seven">
+            <p>SEVEN</p>
+            <ul>
+                <li>Babymetal</li>
+                <a href="#">any link</a>
+                <li>Exina</li>
+                <a href="#">any link</a>
+                <li>Lisa</li>
+                <a href="#">any link</a>
+                <li>Nemophila</li>
+                <a href="#">any link</a>
+                <li>Atarachi Gako</li>
+                <a href="#">any link</a>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
