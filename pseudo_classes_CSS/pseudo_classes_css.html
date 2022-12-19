@@ -8,6 +8,7 @@
     <style>
         body {
             margin-top: 70px;
+            margin-bottom: 70px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -45,7 +46,7 @@
 
 
 
-        /* 2 - Identificar e manipilar o estado do elemento em uma lista, primeiro e ultimo filho*/
+        /* 2 - Identificar e manipular o estado do elemento em uma lista, primeiro e ultimo filho*/
         /*configurações gerais da lista*/
         .japan {
             width: 250px;
@@ -65,6 +66,10 @@
             padding: 0px;
         }
 
+        .japan p {
+            color: red;
+            font-size: large;
+        }
 
         /*01*/
         /* Manipulando o estado do primeiro elemento da lista*/
@@ -78,6 +83,8 @@
             border: none;/*apagando a borda abaixo deste elemento*/
         }
 
+
+        /* 3 - Manipulando o estado dos links*/
         /*manipula o enésimo(o numero n, ou seja qquer numero) item de uma lista, neste caso abaixo o terceiro item - .japan .one li:nth-child(n)*/
         .japan .one li:nth-child(3){
             background-color: gray;
@@ -139,7 +146,7 @@
         }
 
         /*seleciona o terceiro item da lista seja ele qual for, não diferenciando o tipo de elemento*/
-        .japan .six :nth-child(3){
+        .japan .six :nth-child(4){
             background-color: lightgray;
         }
 
@@ -150,12 +157,120 @@
         }
 
         /*seleciona o terceiro item da lista, diferenciando o tipo de elemento, ou seja não selecionará, neste caso o que não for item da lista*/
-        .japan .seven li:nth-of-type(3) {
+        .japan .seven li:nth-of-type(4) {
             background-color: lightgray;
+        }
+
+
+
+        /* 4 - Pseudo-classes de formulario. Manipular o estado de input de formulario*/
+        .form input:enabled {/*estado do formulario quando ele está ativo*/
+            border: 1px solid #666;
+            outline: none;
+        }
+
+        .form input:disabled {/*estado do formulario quando ele está inativo, não dá pra digitar nada*/
+            border: 1px solid #666;
+            background-color: darkred;
+        }
+
+        .form input:focus {/*quando o campo input for clicado e estiver selecionado para escrever*/
+            border: 1px solid green;
+            background-color: lightgreen;
+        }
+
+        /*reconhecer se o campo está valido ou invalido*/
+        .form #val input:invalid {
+            border: 1px solid #666;
+            background-color: red;
+            color: white;
+        }
+
+        .form #val input:valid {
+            border: 1px solid #666;
+            background-color: green;
+            color: white;
+        }
+
+        /*campo obrigatorio, sem ele estar preenchido o formulario não é enviado e ele altera a cor*/
+        .form #req input:required {
+            border: 1px solid #666;
+            background-color: pink;
+            color: white;
+        }
+
+        /*campo de preenchimento opicional, não altera o envio do formulario*/
+        .form input:optional {
+            border: 1px solid #666;
+            background-color: pink;
+            color: white;
+        }
+
+        /*campo somente de leitura, não pode ser preenchido nem alterado*/
+        .form input:read-only {
+            border: 1px solid green;
+            background-color: lightgreen;
+            color: white;
+        }
+
+        /*campo que é permitido escrever*/
+        .form input:read-write {
+            border: 1px solid green;
+            background-color: lightgreen;
+            color: white;
+        }
+
+        /*campo de input de numero, dentro e fora do range*/
+        .form input:in-range{
+            background-color: blue;
+        }
+
+        .form input:out-of-range{
+            background-color: coral;
+        }
+
+        /*campo de checado e não checado*/
+        .form input:checked {
+            opacity: .5;
+        }
+
+
+        /* 5 - Before e After, insere elementos antes e depois */
+        .text::before{
+            content: "'";
+            color: red;
+        }
+
+        .text::after {
+            content: "'";
+            font-size: 25px;
+            color: blue;
+        }
+
+        .breadcrumbs {/*menus em cascata*/
+            list-style: none;
+            font-size: 20px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .breadcrumbs li {
+            display: inline;/*mostra os itens de uma lista em uma linha*/
+        }
+
+        .breadcrumbs li::after {/*pode ser usado before tambem nos breadcrumbs*/
+            content: '>';
+            padding: 0 5px 0 7px;
+        }
+
+        .breadcrumbs li:last-child:after{/*pode ser usado before tambem nos breadcrumbs*/
+            display: none;
         }
     </style>
 </head>
 <body>
+    <p>LINK</p>
+
     <a href="http://youtube.com" target="_blank" class="link">YouTube</a>
 
     <div class="japan">
@@ -240,5 +355,27 @@
             </ul>
         </div>
     </div>
+    <p>INPUT FORM</p>
+    <div class="form">
+        <input type="text">
+        <input type="text" disabled>
+        <input id="val" type="email">
+        <input id="req" type="email" required>
+        <input type="text" value="Glauco Farina" readonly>
+        <input type="number" value="200" min="10" max="20">
+        <input type="checkbox">
+        <input type="checkbox" checked>
+    </div>
+    <p>BEFORE e AFTER</p>
+    <div class="text">
+        ró
+    </div>
+    <p>BREADCRUMBS</p>
+    <ul class="breadcrumbs">
+        <li>Home</li>
+        <li>Produtos</li>
+        <li>Smartphones</li>
+        <li>Motorola</li>
+    </ul>
 </body>
 </html>
