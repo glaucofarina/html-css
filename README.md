@@ -1,3 +1,3 @@
 # html-css
  
-Este repositório contem aulas de HTNL5 e CSS3.
+Este repositório contem aulas de HTML5 e CSS3.
