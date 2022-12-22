@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento de fundo</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #666;
+            text-align: center;
+        }
+        
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #dc143c;
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        /*
+            posicionamento - onde a imagem vai ficar colocada na tela
+            ponto de ancoragem - lugar onde ela vai ficar fixa, ponto de partida
+        */
+        div.position {
+            background-image: url(images/wallpaper003.jpg);
+            height: 200px;
+            border: 1px solid #666;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        
+        div.position#p1 {
+            background-position: left top; /*posicionamento, ponto de ancoragem esquerda cima*/
+        }
+
+        div.position#p2 {
+            background-position: left center;
+        }
+
+        div.position#p3 {
+            background-position: right bottom;
+        }
+
+        div.position#p4 {
+            background-position: center center;
+        }
+
+        div.body1 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+
+        div.body2 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+
+        div.body3 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: right top;
+        }    
+
+        div.body4 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+
+        div.body5 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        div.body6 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        div.body7 {
+            height: 98vh;
+            border: 1px solid #666;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posicionamento e Ponto de Ancoragem</h1>
+    <p>Posicionamento / ponto de ancoragem (onde a imagem vai ficar fixa, mesmo diminuindo e aumentando a tela - left top</p>
+    <div class="position" id="p1">
+
+    </div>
+    <p>Posicionamento / ponto de ancoragem (onde a imagem vai ficar fixa, mesmo diminuindo e aumentando a tela - left center</p>
+    <div class="position" id="p2">
+        
+    </div>
+    <p>Posicionamento / ponto de ancoragem (onde a imagem vai ficar fixa, mesmo diminuindo e aumentando a tela - right bottom</p>
+    <div class="position" id="p3">
+        
+    </div>
+    <p>Posicionamento / ponto de ancoragem (onde a imagem vai ficar fixa, mesmo diminuindo e aumentando a tela - center center</p>
+    <div class="position" id="p4">
+        
+    </div>
+    <h1>Posicionamento Dentro de uma DIV</h1>
+    <p>Left Top</p>
+    <div class="body1">
+
+    </div>
+    <p>Left Bottom</p>
+    <div class="body2">
+
+    </div>
+    <p>Right Top</p>
+    <div class="body3">
+
+    </div>
+    <p>Right Bottom</p>
+    <div class="body4">
+
+    </div>
+    <p>Center Center</p>
+    <div class="body5">
+
+    </div>
+    <p>Left Center</p>
+    <div class="body6">
+
+    </div>
+    <p>Right Center</p>
+    <div class="body7">
+
+    </div>
+</body>
+</html>
