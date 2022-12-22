@@ -8,22 +8,50 @@
     <style>
         body {
             height: 100vh;
-            background-color: #666;
-            background-image: url(images/wallpaper002.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;/*faz a imagem caber independente do tamanho da tela, mesmmo que corte as laterais ou em cima e em baixo. não exibe 100% da imagem mas ocupa 100% da view port*/
             /*
+            background-color: #666; - cor do fundo
+
+            background-image: url(images/wallpaper002.jpg); - imagem do fundo
+
+            background-position: center center; - posição do fundo
+
+            background-repeat: no-repeat; - repetição do fundo
+
+            background-size: cover; - faz a imagem caber independente do tamanho da tela, mesmmo que corte as laterais ou em cima e em baixo. não exibe 100% da imagem mas ocupa 100% da view port
+
             background-size: auto; - este é o padrão, deixa o navegador se virar para exibir a imagem do fundo.
+
             background-size: contain; - exibe 100% da imagem mas quando aumenta ou diminui a view port ela se ajusta ao tamanho deixando ou barras da cor do fundo em cima e em baixo quando diminui a largura ou deixando nas laterais quando se diminui a altura da view port.
+
             background-size: 100%; - aumenta e diminui o fundo comforme a tela aumenta e diminui, mas deixa um espaço da cor do fundo abaixo da imagem de fundo aparente pois nao ajusta o tamamho da imagem apenas a porcentagem a ser exibida.
+
             background-size: 100% 100%; - preenche todo espaço da tela mas distorce a imagem para fazer caber em toda a view port
+
+            vinculo = attachment
+            background-attachment: scroll; - padrão, o fundo rola com o conteúdo.
+            background-attachment: fixed;fixa o fundo e rola apenas o conteudo
             */
+
+
+            /*
+            SHORTHAND - BACKGROUND (CIRAP)
+
+            color > image > repeat > attachment > position
+
+            obs: embora na documentação este shorthand esteja certo, a propriedade SIZE não funciona, então é descrita fora da shorthand
+            */
+
+            background: #666 url(images/wallpaper002.jpg) no-repeat fixed center center;
+            background-size: cover;
+
+            
+
         }
 
         main {
             background-color: white;
-            width:400px;
+            /*width:400px; - tamanho fixo de largura*/
+            max-width: 700px;/*fixa o tamanho maximo da largura em 700px mas quando diminui o tamanho da tela, o conteudo é adaptavel, ou seja altera-se a largura*/
             margin: auto;
             padding: 10px;
             border: 1px solid black;
@@ -45,6 +73,10 @@
 <body>
     <main>
         <h1>Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
+        <h1>Um Titulo</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto amet eligendi nostrum maxime vel culpa quisquam ea eius suscipit! Recusandae mollitia in vel alias error hic. Velit, laborum voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus totam error dolore aspernatur nesciunt fugit necessitatibus aliquam ad. Delectus, perferendis? Consequuntur voluptatibus tenetur, fugit accusantium quidem cupiditate quia ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus provident aspernatur minus quasi voluptatum dicta sapiente iste nesciunt, quisquam vitae modi eligendi pariatur! Voluptatum aut tenetur repudiandae. Veniam, omnis.</p>
