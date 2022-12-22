@@ -10,37 +10,101 @@
             background-color: black;
         }
 
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+/*
+        Todo alinhamento vertical, sempre é feito pela posição 0,0 do que vai ser alinhado, ou seja nunca vai esta no centro do target.
+        Para isso usamos a propriedade tranform
+*/
         #container {
+            /*tamanho do container*/
+            height: 400px;
+            width: 800px;
+
+            /*fundo do container*/
+            background-color: white;
             background-image: url(images/target001.png);
             background-size: 100% 100%;
-
-            position: relative;
-            height: 100vh;
-            padding: 10px;
-            background-color: white;
+                       
+            margin: auto;
+            position: relative;/*todo posicionamento de um box em html é relativo, então nem precisava colocar essa propriedade*/
         }
 
         #content {
+            height: 200px;
+            width: 400px;
+
+            background-color: #dc143c;
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute;/*todo container é relativo e todo content é absoluto.*/
+            /*quando usamos o position absolute, podemos configurar o left e o top, que é são as distancias da borda container até o ponto 0,0 do content*/
+
+            left: 50%;/*distancia da borda esquerda até 50% ou seja a metade do tamanho do container(o centro do container), o ponto 0,0 do content estára na metade (50%)do tamanho do container ou seja no centro do container, neste caso no eixo horizontal pois é left*/
+            top: 50%;/*distancia da borda superior até 50%, o ponto 0,0 do content estára na metade (50%)do tamanho do container, neste caso no eixo vertical pois é top*/
+        }
+
+        #container1 {
+            height: 400px;
+            width: 800px;
+
+            background-color: white;
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+                       
+            margin: auto;
+            position: relative;
+        }
+
+        #content1 {
+            height: 200px;
+            width: 400px;
+
+            background-color: #dc143c;
             background-image: url(images/target001.png);
             background-size: 100% 100%;
 
             position: absolute;
-            height: 200px;
-            width: 400px;
-            background-color: #dc143c;
-
+            
             left: 50%;
             top: 50%;
 
+            /*
+                - transform: alterar as configurações da caixa
+                - translate: altera a localização do 0,0 da caixa, utlizando -50% e -50% colocamos a ´posição 0,0 no centro da caixa, ou seja deixa de ser superior esquerda para ser centro centro.
+            */
             transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
+    <h1>Conteudo alinhado por 0,0.</h1>
+    <p>O que está sendo alinhado ao centro do container(branco) é a posição 0,0 do content(vermelho) e não o centro do content.</p>
+    <p>Todo alinhamento vertical, sempre é feito pela posição 0,0 do que vai ser alinhado, ou seja nunca vai esta no centro do target.</p>
+    <p>Para isso usamos a propriedade tranform, como mostrado abaixo no quadro 2</p>
     <section id="container">
         <article id="content">
 
         </article>
     </section>
+    <h1>Conteudo alinhado usando a propriedade transform:translate.</h1>
+    <p>O que está sendo alinhado ao centro do container é o centro do content.O translate altera a localização do 0,0 da caixa, utlizando -50% e -50% colocamos a posição 0,0 no centro da caixa, ou seja deixa de ser superior esquerda para ser centro centro.</p>
+    <section id="container1">
+        <article id="content1">
+
+        </article>
+    </section>
+    
+    
 </body>
 </html>
