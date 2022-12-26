@@ -65,17 +65,36 @@ section {
 section.normal {
     background-color: white;
     color: black;
-    
 }
 
 section.image {
     background-color: darkgray;
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.479);/*inset refe. a sombra interna do box*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section > p {
+    padding-bottom: 2em;
 }
 
 section.image > p {
-    width: 400px;
-    background-color: #666;
+    display: inline-block;/*faz o paragrafo virar uma caixa do tamanho do conteudo*/
+    padding: 5px;
+    background-color: rgba(102, 102, 102, 0.322);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../images/background001.jpg');
+    background-position: right center;
+   
+}
+
+section#img02 {
+    background-image: url('../images/background002.jpg');
+    
 }
 
 footer {
