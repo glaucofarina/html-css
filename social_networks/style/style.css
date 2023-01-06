@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* (*) é o seletor universal, para todos os componentes*/
+* {
+    /*zerando margin e paddin de todo o conteudo*/
+    margin: 0px;
+    padding: 0px;
+
+    /*fonte usada em todo conteudo*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    /*100% da view Height*/
+    height: 100vh;
+
+    /*100% da view Width*/
+    width: 100vw;
+    background-color: black;
+}
+
+/*background do body*/
+body {
+    /*localização da imagem de background*/
+    background: url(../images/fundo-madeira.jpg)
+
+    /*para a imagem não se repetir*/
+    no-repeat
+
+    /*alinhamento pelo topo ou seja em cima e centralizado, dentro da section e não dentro do site todo*/
+    top center;
+
+    /*tamanho do background, cover, para cobrir a tela toda*/
+    background-size: cover;
+
+    /*imagem fixa, para não haver rolagem*/
+    background-attachment: fixed;
+}
+
+main {
+    /*posicionamento é relativo pois tem section que precisa ser posicionada*/
+    position: relative;
+
+    /*100% da view Height*/
+    height: 100vh;
+}
+
+section#tel {
+    /*posicionamento absoluto, para poder centralizar a section dentro da main*/
+    position: absolute;
+
+    /*posicionamento da section - o ponto 0,0(ou seja o canto superior esquerdo) vai ficar centralizado, 50% do topo e 50% da esquerda*/
+    top: 50%;
+    left: 50%;
+
+    /*transforma o ponro 0,0 de canto superior esquerdo para centro centro. ou seja o ponto de guia para posicionamento passa a ser o centro da section. Então o ponto a ser centralizado será o centro da section*/
+    transform: translate(-50%, -50%);
+
+    /*tamanho da section, largura e altura (tamano da imagem usada(frame-iphone.png) que é um arquivo png com fundo transparente*/
+    height: 627px;
+    width: 311px;
+
+    /*cor de fundo da section, antes de colocar o background, foi usada esta cor no retangulo da section apenas a titulo de ilustração de posicionamento.
+    background-color: blue;
+    */
+
+    /*imagem de fundo da section, frame-iphone.png com fundo transparente*/
+    background:  url(../images/frame-iphone.png) no-repeat;
+}
+
+/*configurações do iframe dentro da section*/
+iframe#screen {
+    /*posicionamento do iframe dentro de section(veja que no html o iframe esta dentro de section)*/
+    position: relative;
+    /*o ponto a ser alinhado é sempre o 0,0 ou seja o topo esquerdo*/
+
+    /*alinhamento dentro da section para o iframe ficar dentro da tela do celular*/
+    top: 80px;
+    left: 22px;
+
+    /*redimensionamento do iframe para ficar do tamanho exato da tela do celular*/
+    width: 269px;
+    height: 471px;
+
+    
+}
