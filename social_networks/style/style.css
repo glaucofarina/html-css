@@ -81,6 +81,44 @@ iframe#screen {
     /*redimensionamento do iframe para ficar do tamanho exato da tela do celular*/
     width: 269px;
     height: 471px;
+}
 
-    
+/*configurações dos botoes dentro da section social*/
+section#social {
+    /*alinhamento à direita*/
+    text-align: right;
+}
+
+/*configurações das imagens dentro dos links da section social*/
+section#social img {
+    /*tamanho das imagens*/
+    width: 50px;
+    height: 50px;
+
+    /*margem entre as imagens*/
+    margin: 10px;
+
+    /*circunferencia da borda a 50% indica que vai ser 50% de cada ponta, então ficará redonda*/
+    border-radius: 50%;
+
+    /*faz com que a borda fique dentro da caixa, para quando passar o mouse por cima(hover) o botao/imagem não se mova e nem mova os outros em volta*/
+    box-sizing: border-box;
+
+    /*sombra dos botões*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+}
+
+section#social img:hover {
+    /*borda quando passar o mouse por cima(hover) do botao/imagem*/
+    border: 2px solid rgba(255, 255, 255, 0.61);
+
+    /*quando passar o mouse por cima(hover) faz com que o botao/imagem se mova criando a ilusao de movimento/apertar*/
+    transform: translate(-3px, -3px);
+
+    /*quando passar o mouse por cima(hover) faz com que a movimentacão(transição) do transform: translate ocorra mais suavemente, o tempo pode ser alterado*/
+    /*quando passar o mouse por cima(hover) faz com que a movimentacão(transição) da borda: border ocorra mais suavemente, o tempo pode ser alterado*/
+    transition: transform .3s, border .5s;
+
+    /*quando passar o mouse em cima(hover) faz a sombra se movimentar aumentando a ilusao do botao/imagem estar se movimentando*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.678);
 }
