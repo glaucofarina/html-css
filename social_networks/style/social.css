@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*zerando cofigurações gerais e padronizando a fonte*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*esconder a barra de rolagem*/
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+img {
+    /*imagem ocupa 100% do tamanho da tela*/
+    width: 100vw;
+}
+
+a {
+    /*muda o botão para baixo*/
+    display: block;
+
+    /*cor do fundo do botão*/
+    background-color: darkred;
+
+    /*cor do texto do botao*/
+    color: white;
+
+    /*Ajuste de distancia*/
+    padding: 20px;
+
+    /*alinhamento do texto - centralizado*/
+    text-align: center;
+
+    /*ajuste da grossura da fonte*/
+    font-weight: bolder;
+
+    /*retirar o traço abaixo do texto*/
+    text-decoration: none;
+}
+
+a:hover {
+    /*cor de fundo do botao quando em hover*/
+    background-color: red;
+}
+    
