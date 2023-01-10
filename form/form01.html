@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Formulario</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+       :root {
+        --font-01:'Plus Jakarta Sans', sans-serif;
+       }
+       
+       * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            font-family: var(--font-01);
+        }
+
+        
+
+        /*
+        FORMULARIO 1
+        */
+        div#f1 {
+            width: 250px;
+            height: 320px;
+            background-color: white;
+        }
+
+        form#one {
+            width: 200px;
+            height: 220px;
+            background-color: white;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.199);
+            border: 1px solid rgba(102, 102, 102, 0.329);
+            border-radius: 7px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #login{
+            padding: 0px;
+            margin-left: 10px;
+            font-family: var(--font-01);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #tostart {
+            color: red;
+            padding: 0px;
+            margin-left: 10px;
+            font-family: var(--font-01);
+            font-size: 14px;
+        }
+
+        #iname, #ipassword {
+            padding: 0px;
+            font-family: var(--font-01);
+            font-size: 11px;
+        }
+
+        #forgot {
+            padding: 0px;
+            margin-left: 10px;
+            margin-top: 5px;
+            font-family: var(--font-01);
+            font-size: 10px;
+        }
+
+        #p01 {
+            padding-top: 22px;
+            margin-left: 10px;
+        }
+
+        #p02 {
+            padding-top: 3px;
+            margin-left: 10px;
+        }
+
+        #submit_button_1 {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            width: 175px;
+            height: 23px;
+            background-color: #dc143c;
+            font-family: var(--font-01);
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+        }
+
+        #submit_button_1:hover {
+            background-color: red;
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.404);
+        }
+
+
+        /*
+        FORMULARIO 2
+        */
+        div#f2 {
+            width: 250px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        #two > p {
+            padding: 10px;
+        }
+
+        #two{
+            display: block;
+            margin: auto;
+            width: 200px;
+            height: 210px;
+            background-color: darkgray;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        img#fb_logo {
+            display: block;
+            margin: auto;
+            width: 175px;
+            height: 33px;
+            padding: 7px;
+        }
+        p#sb {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        input#sb1, input#sb2 {
+            width: 70px;
+            height: 27px;
+            background-color: rgb(0, 81, 255);
+            color: white;
+            border-radius: 10px;
+            border: 0px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+        }
+
+        input#sb1:hover, input#sb2:hover {
+            background-color: blue;
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.404);
+        }
+
+        #ipas::placeholder, #iusu::placeholder {
+            text-align: center;
+            color: rgb(0, 81, 255);
+        }
+
+
+
+        /*
+        FORMULARIO 3
+        */
+        div#f3 {
+            width: 250px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        #three > p {
+            padding: 8px;
+        }
+
+        #three{
+            display: block;
+            margin: auto;
+            width: 235px;
+            height: 155px;
+            background-color: lightcoral;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+
+        /*
+        FORMULARIO 4
+        */
+        div#f4 {
+            width: 350px;
+            height: 300px;
+            margin-top: 20px;
+            
+        }
+
+        #four fieldset > p {
+            padding: 8px;
+        }
+
+        #four{
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: 155px;
+            background-color: lightyellow;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        #b4 {
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        /*
+        FORMULARIO 5
+        */
+        div#f5 {
+            width: 350px;
+            height: 300px;
+            margin-top: 20px;
+            
+        }
+
+        #five fieldset {
+            padding: 8px;
+        }
+
+        #five{
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: 250px;
+            background-color: #dc143c;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        #b5 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #p5 {
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="f1">
+    <h1>Formulário 1</h1>
+    <!--
+        - Todo formulário tem que estar entre as tags <form> e </form>.
+        
+        - form action - cria o que vai ser feito com o formulario quando apertar submit. Neste caso carrega um arquivo php.
+        - method - é o metodo que o formulario será enviado.
+            - get - usar quando os dados não forem sensiveis, pois os campos ecritos ficam visiveis na url, quando o formulario for enviado. get pode ser usado até 3000 letras(3000 bytes).
+            - post - usar quando os dados dos campos forem sensiveis ou quando usar qualquer outro tipo de envio como fotos, documentos etc ou usar mais de 3000 letras.
+
+        - autocomplete="off" ou "on" liga ou desliga o autocompletar e um formulario.
+        
+        - Devemos sempre fazer uma ligação entre o que foi pedido(label) e o campo a ser preenchido(controle), para isso usamos a tag<LABEL>. Para ligarmos usamos os campos name e id.
+            - name é importante para o html e para o php
+            - id é importante para o javascript.
+        - Na tag <label> podemos usar name e/ou id. No caso abaixo para diferenciar o name do id, o id tem um i na frente.
+
+        - Toda forma de inserção de dados em um formulario usa a tag <input>
+            - O input text serve para enviarmos testo ao formulario e tem que ter um name e um id.
+
+        - Para mandar um formulário usa-se a tag <submit> com o value o que estará escrito no botão.
+    -->
+
+    <form id="one" action="cadastro.php" method="get" autocomplete="off">
+        <p id="login">Log in</p>
+        <p id="tostart">to start learning</p>
+        <p id="p01">
+            <label id="iname" for="inome">Name:</label><br>
+            <input type="text" name="nome" id="inome" size="20">
+        </p>
+        <p id="p02">
+            <label id="ipassword" for="isobrenome">Password:</label><br>
+            <input type="text" name="sobrenome" id="isobrenome" size="20">
+        </p>
+        <p id="forgot">Forgot password?</p>
+        <p>
+            <input id="submit_button_1" type="submit" value="Enviar">
+        </p>
+    </form>
+</div>
+
+
+
+<div id="f2">
+    <h1>Formulario 2</h1>
+    <!--
+        - No input podemos colocar algumas opções sendo:
+        - required torna o campo obrigatório para o envio do formulario.
+        - minlenght e maxlenght referen-se ao tamanho minimo e máximo de dados a serem preenchidos.
+        - size define o tamanho da caixa do que o usuario vai digitar.
+        - autocomplete username define que este campo so se autocompetará com nomes de usuarios que ja foram digitados
+        - autocomplete current-password define que este campo se autocompletará com senhas previamente digitadas.
+        - placeholder - mostrara uma mensagem dentro da caixa a ser preenchida.
+
+        input type reset - limpará os campos do formulário.
+    -->
+
+    <form id="two" action="cadastro.php" method="post" autocomplete="on">
+        <img id="fb_logo" src="images/fb.png" alt="facebook">
+        <p>
+            <label for="iusu"><strong>Usuário:</strong> </label><br>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="20" autocomplete="username" placeholder="nome do usuario">
+        </p>
+        <p>
+            <label for="isen"><strong>Senha:</strong> </label><br>
+            <input type="password" name="pas" id="ipas" required minlength="5" maxlength="10" size="20" autocomplete="current-password" placeholder="digite a senha">
+        </p>
+        <p id="sb">
+            <input id="sb1" type="submit" value="Enviar">
+            <input id="sb2" type="reset" value="Limpar">
+        </p>
+    </form>
+</div>
+
+
+<div id="f3">
+    <h1>Formulario 3</h1>
+    <!--
+        - input type number
+            - estabelecendo valores minimos e maximos min e max.
+            - de quanto vai ser o pulo do numero, step.
+            - se qusier que apareça um numero inicial - value.
+        - input type month
+            - mostra um periodo de um mes, somente de mes em mes
+            - se quser que apareça um valor inicial - value(primeiro o ano depois o mes separado por traço).
+        - input type data
+            - mostra a data no calendario dia a dia
+            - pode aparecer um valor inicial - value(ano-mes-dia)
+        - input type time
+            - mostra o horario   
+            - pode aparecer um valor inicial - value(hora:minuto)
+    -->
+    <form id="three" action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="imedia">Média: </label><!-- faz a junção do label (Média) com o controle (campo a ser preenchido). Neste caso a junção é pelo id, é o mesmo.-->
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" value="5" required>
+        </p>
+        <p>
+            <label for="imes">Periodo: </label>
+            <input type="month" name="mes" id="imes" value="1978-09">
+        </p>
+        <p>
+            <label for="idata">Data: </label>
+            <input type="date" name="data" id="idata" value="1978-09-27">
+        </p>
+        <p>
+            <label for="itime">Hora: </label>
+            <input type="time" name="time" id="itime" value="12:00">
+        </p>
+    </form>
+</div>
+
+
+<div id="f4">
+    <h1>Formulário 4</h1>
+    <!--
+        - input type email - para colocar um email, não ha como cofirmar se o email é valido ou não, apenas o formulario ceita ser eviado se tiver um @.
+        input type tel - para colocar um numero de telefone.
+
+        ESTUDAR SOBRE RegEx - para que o campo aceite apenas as informações corretas.
+
+        exemplos de pattern RegEx:
+            pattern:"^[0-9]{4}-[0-9]{4}$" - so aceitara 2 blocos de 4 digitos de 0 a 9.
+
+            pattern:"^\d{4,5}-\d{4}$" - so aceitara 2 blocos, um de 4 a 5 digitos(\d) e outro de 4 digitos.
+
+            pattern:"^\({2}\)\d{4,5}-\d{4}$" - so aceitara 3 blocos, um de dois digitos entre parenteses, um de 4 a 5 digitos(\d) e outro de 4 digitos.
+        
+        - fieldset - reune as informações dentro de bordas, separa as informações de um formulario por assunto
+        - legend - da uma legenda ao fieldset
+    -->
+    <form id="four" action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="iiname">Nome: </label>
+                <input type="text" name="name" id="iiname">
+            </p>
+            <p>
+                <label for="iemail">E-mail: </label>
+                <input type="email" name="mail" id="iemail" >
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" required pattern="^[0-9]{4}-[0-9]{4}$" placeholder="0000-0000">
+            </p>
+        </fieldset>
+        <p id="b4">
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</div>
+
+
+<div id="f5">
+    <h1>Formulario 5</h1>
+    <!--
+        - input type radio - serve para checar e deschecar com a forma de um disco(ponto). Neste caso como temos que escolher apenas uma opção entre masculino e feminino deixamos o name igual nas 2 opções, então quando checarmos uma, automaticamente vai deschecar a outra opção.
+            - o value é M ou F que é o que o cadastro.php vai receber como opção escolhida.
+        - input type checkbox - serve para checar com um "checked", Podemos deixar algumas opções previamente checadas acrescentando checked como parametro.
+    -->
+    <form id="five" action="cadastro.php" method="get" autocomplete="on">
+        <fieldset id="sexo">
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc" value="M">
+            <label for="imasc">Masculino</label><br>
+            <input type="radio" name="sexo" id="ifem" value="F">
+            <label for="ifem">Feminino</label>
+        </fieldset>
+        <p id="p5"></p>
+        <fieldset>
+            <legend>Bandas</legend>
+            <input type="checkbox" name="babymetal" id="ibabymetal" checked>
+            <label for="ibabymetal">Babymetal</label><br>
+            <input type="checkbox" name="nemophila" id="inemophila">
+            <label for="inemophila">Nemophila</label><br>
+            <input type="checkbox" name="exina" id="iexina" checked>
+            <label for="iexina">Exina</label><br>
+            <input type="checkbox" name="shiena" id="ishiena" checked>
+            <label for="ishiena">Shiena Nishizawa</label><br>
+            <input type="checkbox" name="lisa" id="ilisa">
+            <label for="ilisa">Lisa</label>
+        </fieldset>
+        <p id="b5">
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+</div>
+</body>
+</html>
