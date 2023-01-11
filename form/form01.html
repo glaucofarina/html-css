@@ -33,14 +33,16 @@
             width: 250px;
             height: 320px;
             background-color: white;
+            
         }
 
         form#one {
             width: 200px;
             height: 220px;
-            background-color: white;
-            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.199);
-            border: 1px solid rgba(102, 102, 102, 0.329);
+            background: rgb(255,255,255);
+            background: linear-gradient(207deg, rgba(255,255,255,1) 22%, rgb(250, 244, 244) 73%);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.151);
+            border: 1px solid rgba(102, 102, 102, 0.171);
             border-radius: 7px;
             margin: auto;
             padding: 10px;
@@ -92,7 +94,7 @@
             margin-top: 20px;
             width: 175px;
             height: 23px;
-            background-color: #dc143c;
+            background: linear-gradient(90deg, rgb(185, 2, 39) 22%, rgb(241, 8, 8) 73%);
             font-family: var(--font-01);
             color: white;
             border-radius: 5px;
@@ -101,7 +103,7 @@
         }
 
         #submit_button_1:hover {
-            background-color: red;
+            background-color: rgb(255, 39, 39);
             box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.404);
         }
 
@@ -228,7 +230,7 @@
         */
         div#f5 {
             width: 350px;
-            height: 300px;
+            height: 380px;
             margin-top: 20px;
             
         }
@@ -255,6 +257,87 @@
         }
 
         #p5 {
+            padding: 7px;
+        }
+
+
+        /*
+        FORMULARIO 6
+        */
+        div#f6 {
+            width: 480px;
+            height: 250px;
+            margin-top: 20px;
+            
+        }
+
+        #six{
+            display: block;
+            margin: auto;
+            width: 450px;
+            height: 150px;
+            background-color: white;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        #six > p {
+            padding: 7px;
+        }
+        
+
+        /*
+        FORMULARIO 7
+        */
+        div#f7 {
+            width: 350px;
+            height: 370px;
+            margin-top: 20px;
+            
+        }
+
+        #seven{
+            display: block;
+            margin: auto;
+            width: 270px;
+            height: 290px;
+            background-color: white;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        #seven > p {
+            padding: 7px;
+        }
+
+
+        /*
+        FORMULARIO 8
+        */
+        div#f8 {
+            width: 350px;
+            height: 250px;
+            margin-top: 20px;
+            
+        }
+
+        #eight{
+            display: block;
+            margin: auto;
+            width: 310px;
+            height: 240px;
+            background-color: white;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+            border: 0px;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        #eight > p {
             padding: 7px;
         }
     </style>
@@ -285,7 +368,7 @@
 
     <form id="one" action="cadastro.php" method="get" autocomplete="off">
         <p id="login">Log in</p>
-        <p id="tostart">to start learning</p>
+        <p id="tostart">to start share</p>
         <p id="p01">
             <label id="iname" for="inome">Name:</label><br>
             <input type="text" name="nome" id="inome" size="20">
@@ -296,7 +379,7 @@
         </p>
         <p id="forgot">Forgot password?</p>
         <p>
-            <input id="submit_button_1" type="submit" value="Enviar">
+            <input id="submit_button_1" type="submit" value="Send">
         </p>
     </form>
 </div>
@@ -447,7 +530,135 @@
             <input type="submit" value="Enviar">
         </p>
     </form>
+</div>
 
+<div id="f6">
+    <h1>Formulario 6</h1>
+    <!--
+        - input type cor: para que seja escolhida uma cor a ser enviada. Podemos iniciar com uma cor previamente escolhida adicionando o campo value e descrevendo a cor.
+        - imput type range: cria uma escala para ser enviada o que escolhemos. Inicialmente é criada de 0 a 100 com value 50 mas podemos alterar o valor minimo, o máximo e onde a escala se iniciará com value.
+        input type file - para enviar arquivos. Neste caso o formulario tem que usar o metodo POST, para que o envio seja completado.
+    -->
+    <form id="six" action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#dc143c">
+        </p>
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="5">
+        </p>
+        <p>
+            <label for="ifoto">Foto do Perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+        <p>
+            <input type="submit" value="Send">
+        </p>
+    </form>
+</div>
+
+<div id="f7">
+    <!--
+        - select - para que o usuario selecione uma opção.
+            - Na primeira tag option, podemos deixar ativa a opção selected  e fazer um texto dizendo para o usuario escolher.
+            - optgroup - agrupa as escolhas por partes predefinidas, neste caso regioes do Brasil
+            - option - são as opções que podemos ter, o value é o que vai ser enviado quando apertar SEND.
+        - datalist - usamos um input text e o datalist para listarmos os itens mas podemos deixar o campo em aberto para o usuario escrever o que ele quer.
+        - textarea - permite que o usuario mande uma mensagem, o method tem que ser post.
+            - col e row permite ajustar o tamanho da caixa de mensagem.
+            - maxlenght - permite que escolhemos o limite maximo de caracteres
+            - placeholder - deixa uma mensagem na caixa de texto
+    -->
+    <h1>Formulário 7</h1>
+    <form id="seven" action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Regiao Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Região Sul">
+                    <option value="PR">Parana</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="listprof">
+            <datalist id="listprof" maxlength="15">
+                <option value="ADM">Administrador</option>
+                <option value="CTD">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="COZ">Cozinheiro</option>
+            </datalist>
+
+        </p>
+        
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" maxlength="3000" placeholder="Escreva sua mensagem aqui"></textarea>
+        </p>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<div id="f8">
+    <h1>Formulario 8</h1>
+    <!--
+        output - pode mostrar informações de saida. No caso abaixo está fazendo a soma de dois numeros dados pelo input number predefinidos entre 0 e 50(podem ser de escolha livre).
+            abaixo temos um codigo de javascript que basicamente significa: execute quando o input for feito(oninput) -> isoma que esta dentro do HTML recebe o numero que esta dentro de in1.value mais o numero que esta dentro de in2.value
+        e mostre no output.    
+        - podemos fazer um output do input type range, assim mostra, conforme for rolando a barra, o numero que esta sendo escolhido ao lado.
+        ou seja conforme o codigo javascript esta dizendo: quando for feito o input, ival(que é o output) vai receber o numero de inum.value.
+        - calcIdade é um output que calcula com ajuda de um codigo javascript a idade baseada no ano que nasceu comparada ao ano atual.
+    -->
+    <form id="eight" action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="" id="in1" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="" id="isoma">0</output>
+        </p>
+
+        <p>
+            <label for="inum">Numero: </label>
+            <input type="range" name="" id="inum" value="50" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">50</output>
+        </p>
+        <p>
+            <label for="iano">Em que ano vc nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2020" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iidade">No ano atual vc tem ou terá anos:</label>
+            <output id="iidade">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Send">
+        </p>
+    </form>
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
 </div>
 </body>
 </html>
