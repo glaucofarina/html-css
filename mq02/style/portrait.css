@@ -2,5 +2,6 @@
 
 body {
     background-image: url(../images/bm_portrait.jpg);
+    background-size: cover;
     background-position: center top;
 }
