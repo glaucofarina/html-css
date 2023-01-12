@@ -3,4 +3,5 @@
 body {
     background-image: url(../images/bm_landscape.jpg);
     background-size: cover;
+    background-position: left top;
 }
