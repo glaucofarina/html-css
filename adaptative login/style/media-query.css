@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+:root {
+    --verde:#49a09d;
+    --lilas:#5f2c82;
+    --offw:#f5f2d0;
+}
+
+/*
+    site projetado com a filosofia mobile first.
+    Aqui apenas configurações para tablet e pc
+*/
+
+/*
+    TABLET 
+    - quando as medidas exibidas estiverem entre 768 e 992, serão exibidas as configurações abaixo
+*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, var(--verde), var(--lilas));
+    }
+    
+    section#login {
+        width: 80vw;
+        height: 320px;
+    }
+
+    section#login > div#image {
+        background: var(--lilas) url(../images/tablet.jpg) no-repeat;
+        background-size: cover;
+        
+        /*a imagem vai ocupar 30% da largura pq o formulario irá ocupar 70% */
+        width: 40%;
+
+        /*a imagem ocupará 100% da altura*/
+        height: 100%; 
+        
+        /*dentro da section login, a div image estárá a esquerda*/
+        float: left;
+    }
+    
+    section#login > div#form {
+        /*o form vai ocupar 70% da largura pq a imagem irá ocupar 30% */
+        width: 60%;
+
+        /*dentro da section login, a div form estárá a direita*/
+        float: right;
+    }
+
+    section#login > div#form > h1 {
+        font-size: 1.8em;
+    }
+    
+    section#login > div#form > p {
+        font-size: 1.2em;
+    }
+}
+
+
+/*
+    PC e Telas Grandes 
+    - quando as medidas exibidas estiverem acima de 992 ou seja quando o tamanho minimo ser 992px, serão exibidas as configurações abaixo
+*/
+@media screen and (min-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, var(--lilas), var(--verde));
+    }
+
+    section#login {
+        width: 950px;
+        height: 290px;
+    }
+
+    section#login > div#image {
+        background: var(--lilas) url(../images/site.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        /*a imagem vai ocupar metade da largura */
+        width: 50%;
+
+        /*a imagem ocupará 100% da altura*/
+        height: 100%; 
+        
+        /*dentro da section login, a div image estárá a direita*/
+        float: right;
+    }
+    
+    section#login > div#form {
+        /*o form vai ocupar a outra metdade da largura */
+        width: 50%;
+
+        /*dentro da section login, a div form estárá a esquerda*/
+        float: left;
+    }
+
+    section#login > div#form > h1 {
+        font-size: 2em;
+    }
+    
+    section#login > div#form > p {
+        font-size: 1.2em;
+    }
+}
