@@ -125,12 +125,11 @@ section#login > div#form > p {
 }
 
 /*formatação do botao - ENTER*/
-form > input[type=submit] {
+.submit {
     display: block;
     margin: auto;
     width: 120px;
     height: 35px;
-    
     color: var(--offw);
     font-size: 1em;
     border: none;
@@ -140,12 +139,12 @@ form > input[type=submit] {
 }
 
 /*formatação do botao em hover - ENTER*/
-form > input[type=submit]:hover {
+.submit:hover {
     background-color: #3a817f;
 }
 
 /*formatacao link forgot pass*/
-.submit_buttom {
+.forgot {
     display: block;
     width: 100%;
     height: 48px;
